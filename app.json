@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "liveliness-detection",
+    "name": "liveliness detection",
     "slug": "liveliness-detection",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,10 +20,34 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.gauravsony.livelinessdetection",
+      "permissions": ["android.permission.INTERNET"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
+          "enableMicrophonePermission": true,
+          "microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26,
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0",
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
   }
 }
